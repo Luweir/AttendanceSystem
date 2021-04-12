@@ -1,0 +1,5 @@
+<view class="input-frame">
+  <text >管理员密码</text>
+  <input bindinput="getRootPassword" password="true" placeholder="root password"/>
+  <button type="primary" bindtap="confirm" style="margin-top:50rpx">确认</button>
+</view>

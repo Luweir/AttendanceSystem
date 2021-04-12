@@ -1,0 +1,9 @@
+<view class="showMap">
+    <map id="map" longitude="{{c_longitude}}" latitude="{{c_latitude}}" scale="16" controls="{{controls}}" markers="{{markers}}" polyline="{{polyline}}" show-location style="width: 100%; height: 100%;"></map>
+</view>
+<view class="view_location_signIn">
+    <button bindtap="handleLocationSignIn">位置签到</button>
+</view>
+<view >
+    <button bindtap="goToSignInCalendar" style="background:#04b9b0">考勤记录</button>
+</view>

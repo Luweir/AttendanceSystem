@@ -1,0 +1,19 @@
+/* pages/signIn/signIn.wxss */
+.view_location_signIn {
+    padding: 40rpx;
+}
+
+.view_location_signIn button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:black;
+    background: #8fb3e7;
+
+}
+
+.showMap {
+    width: 750rpx;
+    height: 750rpx;
+    border-color: #ed8072;
+}

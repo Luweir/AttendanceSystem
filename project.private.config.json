@@ -1,0 +1,71 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/personCenter/personCenter",
+          "pathName": "pages/personCenter/personCenter",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/root/root",
+          "pathName": "pages/root/root",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/addressBook/addressBook",
+          "pathName": "pages/addressBook/addressBook",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/manageActivity/manageActivity",
+          "pathName": "pages/manageActivity/manageActivity",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/signIn/signIn",
+          "pathName": "pages/signIn/signIn",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/updatePersonCenter/updatePersonCenter",
+          "pathName": "pages/updatePersonCenter/updatePersonCenter",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/attendance/attendance",
+          "pathName": "pages/attendance/attendance",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/updateRootPsw/updateRootPsw",
+          "pathName": "pages/updateRootPsw/updateRootPsw",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

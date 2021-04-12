@@ -1,0 +1,13 @@
+<view class="update-psw-frame">
+  <view>
+    <view >
+      原密码:<input bindinput="getOriginalPassword" password="true" style="background-color:#fff;height:60rpx" />
+    </view>
+  </view>
+  <view >
+    新密码<input bindinput="getNewPassword" password="true" style="background-color:#fff;height:60rpx" />
+  </view>
+</view>
+<view>
+  <button type="primary" bindtap="confirmChange">确认</button>
+</view>

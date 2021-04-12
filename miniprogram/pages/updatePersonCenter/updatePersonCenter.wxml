@@ -1,0 +1,21 @@
+<view class=".text-frame">
+  <text>工号</text>
+</view>
+<view>
+  <input class=".input-frame" type="number" bindinput="formNum" placeholder="{{new_info.num}}" disabled="{{have_info}}"/>
+</view>
+<view class=".text-frame">
+  <text>姓名</text>
+</view>
+<view>
+  <input class=".input-frame" bindinput="formName" placeholder="{{new_info.name}}"/>
+</view>
+<view class=".text-frame">
+  <text>电话</text>
+</view>
+<view>
+  <input class=".input-frame" type="number" bindinput="formTel" placeholder="{{new_info.tel}}"/>
+</view>
+<view style="padding:20rpx">
+  <button type="primary" bindtap="confirm">提交</button>
+</view>

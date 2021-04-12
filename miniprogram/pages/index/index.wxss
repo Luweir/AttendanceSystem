@@ -1,0 +1,84 @@
+.swiper-list {
+  width: 100%;
+  height: 350rpx;
+}
+
+.swiper-image {
+  width: 100%;
+}
+
+.gsdtView {
+  display: flex;
+  height: 80rpx;
+  background-color: white;
+  align-items: center;
+}
+
+.gsdt-text-gsdt {
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.gsdt-text-more {
+  display: flex;
+  justify-content: flex-end;
+  color: #64b5f5;
+  padding: 10rpx;
+}
+.selection {
+  width: 100%;
+  height: 250rpx;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+}
+
+.selection-item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-bottom: #cdcdcd;
+  border-width: 1rpx;
+  border-bottom-style: solid;
+  align-items: center;
+  position: relative;
+}
+.item-img {
+  width: 40%;
+  height: 180rpx;
+  margin-left: 20rpx;
+  border-radius: 6px;
+}
+.item-content {
+  width: 60%;
+  height: 100%;
+  margin-left: 10rpx;
+  font-size: 35rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10rpx;
+  padding-right: 30rpx;
+}
+
+.content {
+  display: -webkit-box;
+  font-size: 28rpx;
+  color: #000;
+  line-height: 45rpx;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  /* 超过字符数时隐藏多余字符 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.time {
+  position: absolute;
+  bottom: 15rpx;
+  right: 20rpx;
+  font-size: 25rpx;
+  color: #2397f2;
+}

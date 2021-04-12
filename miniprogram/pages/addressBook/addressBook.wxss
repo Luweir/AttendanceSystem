@@ -1,0 +1,30 @@
+/* pages/addressBook/addressBook.wxss */
+page {
+  height: 100%;
+}
+
+.address-list {
+  display: flex;
+  height: 80rpx;
+  padding-left: 20rpx;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom:1rpx solid #dfdfdf;
+  background-color: #fff;
+}
+
+.load-more {
+  text-align: center;
+}
+
+.top-row {
+  display: flex;
+  height: 80rpx;
+  padding-right: 30rpx;
+  background-color: #04b8b1;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-around;
+  border-bottom: 3rpx solid black
+}

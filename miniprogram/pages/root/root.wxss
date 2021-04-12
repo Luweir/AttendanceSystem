@@ -1,0 +1,13 @@
+/* pages/root/root.wxss */
+page{
+  background-color: #fbf9fe;
+}
+.manage-activity button {
+  margin-top: 100rpx;
+}
+.update-root-psw button {
+  margin-top: 20rpx;
+}
+.contact-kefu button {
+  margin-top: 20rpx;
+}

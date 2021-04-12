@@ -1,0 +1,20 @@
+page{
+  height:100%;
+  background-color: #f8f8f8;
+}
+.text-frame{
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+  color: #001334;
+  border-bottom:1rpx solid #d9d9d9;
+}
+.input-frame{
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+  border-bottom:1rpx solid #d9d9d9;
+  background-color: #ffffff;
+}

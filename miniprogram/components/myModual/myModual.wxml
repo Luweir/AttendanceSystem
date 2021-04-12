@@ -1,0 +1,18 @@
+<!-- wxml
+	1.mask是遮罩层，防止弹窗时用户点击其他处，modalShow控制整个组件的显隐；
+	2.modal是带输入框的modal容器
+		2-1.getValue事件 获取输入值
+		2-2.modalCancel和modalConfirm事件 取消确认操作
+		2-3.hoverstyle按需可进行触碰样式设置 -->
+<view class="mask" hidden="{{modalShow}}">
+    <view class="modal">
+        <view class="modal_top">
+            <view class="t1">请输入管理员密码</view>
+            <textarea class="t2" value="{{modalValue}}" bindinput="getValue" password="true" />
+        </view>
+        <view class="modal_bottom">
+            <view class="b1" hover-class='hoverstyle' bindtap="modalCancel">取消</view>
+            <view class="b2" hover-class='hoverstyle' bindtap="modalConfirm">确认</view>
+        </view>
+    </view>
+</view>

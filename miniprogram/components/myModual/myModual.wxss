@@ -1,0 +1,67 @@
+/* wxss
+ * 1.这里用来less语法写wxss样式的，这样模仿html的嵌套组织使代码简洁易读易维护
+*/
+.mask {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.mask .modal {
+  border-radius: 18rpx;
+  background-color: #fff;
+  height: 280rpx;
+  width: 600rpx;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mask .modal .modal_top {
+  border-bottom: 2rpx solid #eee;
+  height: 195rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mask .modal .modal_top .t1 {
+  flex: 1;
+  text-align: center;
+  line-height: 38rpx;
+}
+
+.mask .modal .modal_top .t2 {
+  flex: 2;
+  border: 2rpx solid #b9b9b9;
+  width: 80%;
+  margin: 10rpx 0;
+  line-height: 30rpx;
+}
+
+.mask .modal .modal_bottom {
+  height: 85rpx;
+  display: flex;
+}
+
+.mask .modal .modal_bottom view {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36rpx;
+  font-weight: 450;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.mask .modal .modal_bottom .b1 {
+  border-right: 2rpx solid #eee;
+}
+
+.mask .modal .modal_bottom .hoverstyle {
+  background-color: #f6f6f6;
+  color: #000000;
+}

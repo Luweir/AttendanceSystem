@@ -1,0 +1,20 @@
+<!-- pages/root/root.wxml -->
+<!-- 管理员页面实现功能：
+    2. 管理签到；
+    3. 出勤情况；
+    4. 修改密码；
+    5. 联系客服；
+
+     1，2，3, 都要新增页面，并且实现云数据的增删改查 -->
+<view class="manage-activity" >
+    <button type="default" bindtap="manageActivity">管理考勤</button>
+</view>
+<view class="update-root-psw">
+    <button type="default" bindtap="attendance">出勤情况</button>
+</view>
+<view class="update-root-psw">
+    <button type="default" bindtap="updateRootPsw">修改密码</button>
+</view>
+<view class="contact-kefu">
+    <button open-type="contact">联系客服</button>
+</view>

@@ -1,0 +1,48 @@
+<!-- 
+  1. 顶部 下拉选项，选择 年月日 然后 后台拿到time-person中对应记录 
+  2. 拿到 address-book 中所有人员的 num 和  name 并把state数组置为-1
+  3. 把time-person 中人员对应的 num name 以及 state 进行修改
+  4. 所有人员展示出来， num name state（用点表示  绿点正常  红点）
+ -->
+
+<view class="date-title">
+  <picker mode="date" value="{{date}}" bindchange="bindDateChange" end="{{end_date}}">选择日期: {{date}}
+  </picker>
+  <view class="title-icon">
+    <view>
+      <text class="iconfont icon-yuan-copy" style="color:#d81e06" />
+      <text> 未到</text>
+    </view>
+    <view>
+      <text class="iconfont icon-yuan-copy" style="color:#f4ea2a" />
+      <text> 迟到</text>
+    </view>
+    <view>
+      <text class="iconfont icon-yuan-copy" style="color:#1afa29" />
+      <text> 正常</text>
+    </view>
+  </view>
+</view>
+
+
+<view class="comment-field">
+  <view style="padding-left:40rpx"><text class="iconfont .icon-gonghao" />工号</view>
+  <view style="padding-left:80rpx">
+    <text class="iconfont .icon-icon-person" />姓名
+  </view>
+  <view style="padding-left:20rpx">
+    <text class="iconfont .icon-zhuangtai" />出勤状态
+  </view>
+</view>
+<view wx:for="{{person_list}}">
+  <view class="person">
+    <view>{{item.num}}</view>
+    <view style="padding-right:40rpx">{{item.name}}</view>
+    <text wx:if="{{item.state==0}}" class="iconfont icon-yuan-copy" style="color:#f4ea2a" />
+    <text wx:elif="{{item.state==1}}" class="iconfont icon-yuan-copy" style="color:#1afa29" />
+    <text wx:else class="iconfont icon-yuan-copy" style="color:#d81e06" />
+  </view>
+</view>
+<view class="excel-button" wx:if="{{show_excel_button}}">
+  <button bindtap="toExcel">导出至excel表</button>
+</view>

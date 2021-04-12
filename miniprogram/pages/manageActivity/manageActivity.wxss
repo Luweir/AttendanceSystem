@@ -1,0 +1,46 @@
+/* pages/manageActivity/manageActivity.wxss */
+page {
+  background-color: #f8f8f8;
+}
+
+.position-frame {
+  display: flex;
+  background-color: #fff;
+  height: 80rpx;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50rpx;
+  padding-left: 30rpx;
+  padding-right: 20rpx;
+  border-bottom: 1rpx solid #d9d9d9;
+}
+
+.distance-frame {
+  display: flex;
+  background-color: #fff;
+  height: 80rpx;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 30rpx;
+  padding-right: 20rpx;
+  border-bottom: 1rpx solid #d9d9d9;
+}
+
+.time-frame {
+  display: flex;
+  background-color: #fff;
+  height: 80rpx;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 30rpx;
+  padding-right: 60rpx;
+  border-bottom: 1rpx solid #d9d9d9;
+
+}
+
+.start-end-time {
+  display: inline;
+}

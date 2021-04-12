@@ -1,0 +1,16 @@
+<view class="top-row">
+  <view><text class="iconfont .icon-gonghao" />工号</view>
+  <view><text class="iconfont .icon-icon-person" />姓名</view>
+  <view><text class="iconfont .icon-dianhua" />电话</view>
+
+</view>
+<view wx:for="{{list}}" wx:key="_id">
+  <view class="address-list">
+    <view>{{item.num}}</view>
+    <view style="margin-left:60rpx">{{item.name}}</view>
+    <view>{{item.tel}}</view>
+  </view>
+</view>
+<view class="load-more" wx:if="{{show_get_more}}">
+  <text bindtap="toLoadMore">加载更多</text>
+</view>

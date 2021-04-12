@@ -1,0 +1,55 @@
+.denglu-view {
+    display: flex;
+    height: 200rpx;
+    align-items: center;
+    /* background-color: red; */
+    justify-content: center;
+}
+
+.background-image {
+    width: 100%;
+    height: 350rpx;
+    /* 设置背景图 */
+    background: url('http://photocdn.sohu.com/20160112/mp53998899_1452564839339_1_th.jpeg');
+    /* 背景图居中显示 */
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-avator {
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.user-name {
+    font-size: 35rpx;
+}
+
+.kefu-view {
+    display: flex;
+    border: 1px solid #bfbfbf;
+}
+
+.kefu-view button {
+    flex: 1;
+    justify-content: start;
+    text-align: left;
+    background-color: #ffffff;
+}
+
+.feedback-view {
+    display: flex;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.feedback-view button {
+    flex: 1;
+    justify-content: start;
+    text-align: left;
+    background-color: #ffffff;
+}

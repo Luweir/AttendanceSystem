@@ -1,0 +1,52 @@
+/* pages/attendance/attendance.wxss */
+page {
+  height: 100%;
+}
+
+.date-title {
+  margin-top: 20rpx;
+  display: flex;
+  font-display: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.person {
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1rpx solid #ebebeb;
+}
+
+.comment-field {
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 80rpx;
+  background-color: #04b8b1;
+  border-bottom: 2rpx solid black;
+}
+
+.title-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+}
+
+.title-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 5%;
+  align-items: center;
+}
+
+.excel-button {
+  margin-top: 30rpx;
+}

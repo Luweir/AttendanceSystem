@@ -1,0 +1,28 @@
+<view class="background-image" id="myComponent">
+    <!-- <image style="width:100%;height:150rpx;" mode="widthFix" src="http://photocdn.sohu.com/20160112/mp53998899_1452564839339_1_th.jpeg" /> -->
+    <image src="{{user_avator_url}}" class="user-avator" />
+    <text class="user-name">{{user_name}}</text>
+</view>
+<view wx:if="{{show_button}}" class="denglu-view">
+    <button open-type="getUserProfile" bindtap='getUserProfile' type="primary" style="width:500rpx">
+        授权登录
+    </button>
+</view>
+<view wx:if="{{!show_button}}" class="kefu-view">
+    <button bindtap="enterUpdate">修改个人信息</button>
+</view>
+<view wx:if="{{!show_button}}" class="feedback-view">
+    <button bindtap="enterAddressBook">通讯录</button>
+</view>
+<view class="feedback-view">
+    <button bindtap="enterRootModel">管理员模式</button>
+</view>
+<view class="feedback-view">
+    <button open-type="contact">联系客服</button>
+</view>
+<view class="feedback-view">
+    <button open-type="openSetting">授权设置</button>
+</view>
+<view class="feedback-view">
+    <button open-type="feedback">意见反馈</button>
+</view>

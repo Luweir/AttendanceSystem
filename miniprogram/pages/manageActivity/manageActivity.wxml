@@ -1,0 +1,43 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="position-frame">
+    <view>
+      <text class="iconfont .icon-weizhi" />
+      <text>签到位置</text>
+    </view>
+    <view class='address' bindtap='onChangeAddress'>
+      {{m_name}}
+      <text class="iconfont .icon-xiangyou1" />
+    </view>
+  </view>
+  <view class="distance-frame">
+    <view>
+      <text class="iconfont .icon-juliicon-" />
+      可签到范围
+    </view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view>
+        {{distance}}
+        <text class="iconfont .icon-xiangyou1" />
+      </view>
+    </picker>
+  </view>
+  <view class="time-frame">
+    <view>
+      <text class="iconfont .icon-shijian" />
+      签到时间
+    </view>
+    <picker mode="time" value="{{start_time}}" bindchange="bindStartTimeChange">
+      {{start_time}}
+    </picker>
+    <text> -</text>
+    <picker mode="time" value="{{end_time}}" bindchange="bindEndTimeChange">
+      {{end_time}}
+    </picker>
+  </view>
+
+  <view>
+    <button wx:if="{{show_add_button}}" style="margin-top: 30rpx" type="primary" form-type="submit">添加</button>
+    <button wx:else style="margin-top: 30rpx" type="primary" form-type="submit">修改</button>
+    <button style="margin-top: 30rpx;background-color:#70c0b3" form-type="reset">重置</button>
+  </view>
+</form>

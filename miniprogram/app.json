@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/root/root",
+    "pages/index/index",
+    "pages/updatePersonCenter/updatePersonCenter",
+    "pages/manageActivity/manageActivity",
+    "pages/pswVerify/pswVerify",
+    "pages/personCenter/personCenter",
+    "pages/signIn/signIn",
+    "pages/updateRootPsw/updateRootPsw",
+    "pages/attendance/attendance",
+    "pages/addressBook/addressBook",
+    "pages/signInCalendar/signInCalendar",
+    "pages/trend/trend"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00b2f2",
+    "navigationBarTitleText": "考勤系统",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "#00b2f2",
+    "list": [{
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/home1.png",
+        "selectedIconPath": "icons/home2.png"
+      },
+      {
+        "pagePath": "pages/signIn/signIn",
+        "text": "考勤",
+        "iconPath": "icons/signIn1.png",
+        "selectedIconPath": "icons/signIn2.png"
+      },
+      {
+        "pagePath": "pages/personCenter/personCenter",
+        "text": "个人中心",
+        "iconPath": "icons/personCenter1.png",
+        "selectedIconPath": "icons/personCenter2.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序定位"
+    }
+  },
+  "plugins": {
+    "chooseLocation": {
+      "version": "1.0.5",
+      "provider": "wx76a9a06e5b4e693e"
+    }
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}
