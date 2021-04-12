@@ -1,5 +1,5 @@
 # AttendanceSystem
-This is a small program for attendance and attendance；
+This is a small program for attendance；
 
 # 主要功能
 
