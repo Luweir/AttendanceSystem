@@ -277,22 +277,7 @@ Page({
   updateTimePerson: function (c_time, state) {
     let date = c_time.substring(0, 10)
     let time = c_time.substring(11, 16)
-    wx.cloud.database().collection('time-person').doc(date).get()
-      .catch(err => {
-        // 如果没找到，就创建
-        wx.cloud.database().collection('time-person').add({
-            data: {
-              _id: date,
-              num: [],
-              name: [],
-              time: [],
-              state: []
-            }
-          })
-          .then(res => {
-            console.log("创建成功");
-          })
-      })
+
     // 先获得我的工号和姓名，方便存储；
     wx.cloud.database().collection('address-book').doc(app.globalData.openId).get()
       .then(res => {
@@ -303,6 +288,7 @@ Page({
         let time_list = []
         let state_list = []
         // 拿到 time-person 中当前日子已有数据
+        console.log(date);
         wx.cloud.database().collection('time-person').doc(date).get()
           .then(res => {
             num_list = res.data.num
@@ -327,8 +313,26 @@ Page({
                 console.log("添加完成")
               })
           })
-          .catch(res => {
-            console.log("数据库读取失败");
+          .catch(err => {
+            console.log(err);
+            console.log("不存在日期，新建并放入");
+            // 新增数据
+            num_list.push(my_num)
+            name_list.push(my_name)
+            time_list.push(time)
+            state_list.push(state)
+            // 再放入 time-person 中
+            wx.cloud.database().collection('time-person').doc(date).set({
+                data: {
+                  num: num_list,
+                  name: name_list,
+                  time: time_list,
+                  state: state_list
+                }
+              })
+              .then(res => {
+                console.log("添加完成")
+              })
           })
 
       })
