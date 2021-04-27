@@ -22,7 +22,7 @@ Page({
     // 当前位置信息
     // c_address: "",
     c_latitude: 0,
-    c_longitude: 0
+    c_longitude: 0,
   },
 
   onShow: function () {
@@ -87,31 +87,38 @@ Page({
               }
             })
         }
-
-        // 先用includes判断是否有当前日期
-        date = res.data.date,
-          time = res.data.time,
+        // 如果已有当前日期
+        if (res.data.date) {
+          date = res.data.date
+          time = res.data.time
           state = res.data.state
-        // 如果在date数组中 找到了今天的日期 说明用户已完成签到
-        if (date.includes(String(util.formatTime(new Date())).replace(/\//g, '-').substring(0, 10))) {
-          this.setData({
-            done_activity: true
-          })
+          // 如果在date数组中 找到了今天的日期 说明用户已完成签到
+          if (date.includes(String(util.formatTime(new Date())).replace(/\//g, '-').substring(0, 10))) {
+            this.setData({
+              done_activity: true
+            })
+          }
         }
+
       })
       .catch(err => {
         // 如果登录了
         if (app.globalData.isLogin) {
-          wx.showModal({
-              title: "提示",
-              content: "请先完善个人信息再进行签到"
-            })
-            .then(res => {
-              if (res.confirm) {
-                wx.navigateTo({
-                  url: '../updatePersonCenter/updatePersonCenter',
+          wx.cloud.database().collection('address-book').doc(app.globalData.openId).get()
+            .then(res => {})
+            .catch(err => {
+              //
+              wx.showModal({
+                  title: "提示",
+                  content: "请先完善个人信息再进行签到"
                 })
-              }
+                .then(res => {
+                  if (res.confirm) {
+                    wx.navigateTo({
+                      url: '../updatePersonCenter/updatePersonCenter',
+                    })
+                  }
+                })
             })
         } else {
           // 没登陆
@@ -155,6 +162,7 @@ Page({
       }
       // 如果用户未完成当前签到活动 
       else {
+        var that = this
         // 用户当前距离和目标点距离
         var distance = this.getDistance(c_latitude, c_longitude, m_latitude, m_longitude);
         // 在规定距离内，签到成功无论是否迟到，都会存入数据库
@@ -162,19 +170,38 @@ Page({
           // 判断时间是否超出 end_time, state为1表示未超出 state2表示迟到
           let c_state = this.checkTime();
           let c_time = String(util.formatTime(new Date())).replace(/\//g, '-');
-          // 加入今天的签到数据
-          date.push(c_time.substring(0, 10))
-          time.push(c_time.substring(11, 16))
-          state.push(c_state)
 
+          // 加入今天的签到数据
+          if (!date) {
+            date1 = [c_time.substring(0, 10)]
+          } else {
+            date1.push(c_time.substring(0, 10))
+          }
+          if (!time) {
+            time1 = [c_time.substring(11, 16)]
+          } else {
+            time1.push(c_time.substring(11, 16))
+          }
+          console.log(time);
+          if (!state) {
+            state1 = [c_state]
+          } else {
+            state1.push(c_state)
+          }
+          console.log(state);
+          that.setData({
+            date: date,
+            time: time,
+            state: state
+          })
           // 向address-book表中更新用户的签到数据
           wx.cloud.database().collection('address-book').doc(app.globalData.openId)
             .update({
               data: {
-                date: date,
-                time: time,
+                date: date1,
+                time: time1,
                 // 直接存入用户 对于当前设定的签到 的签到状态，而不是到时候查看出勤时实时的状态
-                state: state
+                state: state1
               }
             })
             .then(res => {

@@ -1,4 +1,3 @@
-
 var app = getApp()
 Page({
 
@@ -55,40 +54,38 @@ Page({
         }).get()
         .then(res => {
           // 如果有该工号，则不能创建
-          wx.showModal({
-            title: "提示",
-            content: "工号：" + this.data.new_info.num + " 已存在，请重新输入"
-          })
-        })
-        .catch(err => {
-          // 如果没有这个工号，则新建该用户信息
-          var that = this
-          wx.showModal({
+          if (rea.data) {
+            wx.showModal({
               title: "提示",
-              content: "工号一经提交，不可修改"
+              content: "工号：" + this.data.new_info.num + " 已存在，请重新输入"
             })
-            .then(res => {
-              if (res.confirm) {
-                wx.cloud.database().collection('address-book').add({
-                    data: {
-                      _id: app.globalData.openId,
-                      name: "",
-                      num: "",
-                      tel: ""
-                    }
-                  })
-                  .then(res => {
-                    that.updateUserInfo()
-                  })
-              } else {
-                return
-              }
-            })
+          } else {
+            // 如果没有这个工号，则新建该用户信息
+            var that = this
+            wx.showModal({
+                title: "提示",
+                content: "工号一经提交，不可修改"
+              })
+              .then(res => {
+                if (res.confirm) {
+                  wx.cloud.database().collection('address-book').add({
+                      data: {
+                        _id: app.globalData.openId,
+                        name: "",
+                        num: "",
+                        tel: ""
+                      }
+                    })
+                    .then(res => {
+                      that.updateUserInfo()
+                    })
+                } else {
+                  return
+                } //else括号
+              })
+          }
         })
-
-
     }
-
   },
   updateUserInfo: function () {
     // 然后再更新改用户信息

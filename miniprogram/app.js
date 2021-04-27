@@ -34,7 +34,7 @@ App({
           this.globalData.openId = res.result.openid
           wx.setStorageSync('openId', res.result.openid)
         })
-        .catch(res => {
+        .catch(err => {
           console.log("openId获取失败");
         })
     }
