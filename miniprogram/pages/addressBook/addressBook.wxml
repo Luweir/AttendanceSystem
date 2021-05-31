@@ -1,5 +1,5 @@
 <view class="top-row">
-  <view><text class="iconfont .icon-gonghao" />工号</view>
+  <view><text class="iconfont .icon-gonghao" />学号</view>
   <view><text class="iconfont .icon-icon-person" />姓名</view>
   <view><text class="iconfont .icon-dianhua" />电话</view>
 

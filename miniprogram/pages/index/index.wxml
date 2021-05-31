@@ -1,28 +1,28 @@
 <swiper class="swiper-list" indicator-dots="{{true}}" autoplay="{{true}}" duration="{{500}}" circular="{{true}}">
     <swiper-item>
         <image mode="widthFix" class="swiper-image"
-            src="http://www.fuhaicryo.com/uploads/allimg/210323/1-210323131639159.jpg" />
+            src="https://img-blog.csdnimg.cn/20210531151534377.png" />
     </swiper-item>
     <swiper-item>
         <image mode="widthFix" class="swiper-image"
-            src="http://www.fuhaicryo.com/uploads/allimg/210206/1-2102061516029C.jpg" />
+            src="https://img-blog.csdnimg.cn/20210531151625555.png" />
     </swiper-item>
     <swiper-item>
         <image mode="widthFix" class="swiper-image"
-            src="http://www.fuhaicryo.com/uploads/allimg/210206/1-210206152153646.png" />
+            src="https://img-blog.csdnimg.cn/20210531151715460.png" />
     </swiper-item>
     <swiper-item>
         <image mode="widthFix" class="swiper-image"
-            src="http://www.fuhaicryo.com/uploads/allimg/210206/1-21020615151NG.png" />
+            src="https://img-blog.csdnimg.cn/20210531151925430.png" />
     </swiper-item>
     <swiper-item>
         <image mode="widthFix" class="swiper-image"
-            src="http://www.fuhaicryo.com/uploads/allimg/210206/1-210206151621413.png" />
+            src="https://img-blog.csdnimg.cn/20210531151949636.png" />
     </swiper-item>
 </swiper>
 <view class="gsdtView">
     <text class="iconfont .icon-shuxian" style="color:#45a2f3; font-size:200%;padding-left:0;"></text>
-    <text class="gsdt-text-gsdt">公司动态</text>
+    <text class="gsdt-text-gsdt">实验室动态</text>
     <text class="gsdt-text-more ">更多</text>
     <text class="iconfont .icon-xiangyou" style="color:#45a2f3;font-size=80%;padding-right:20rpx"></text>
 </view>
@@ -35,6 +35,7 @@
             <view class='item-content'>
                 <text class='content'>{{item.content}}</text>
             </view>
+            
             <text class='time'>{{item.sendTime}}</text>
         </view>
     </navigator>

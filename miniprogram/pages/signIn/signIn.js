@@ -173,20 +173,20 @@ Page({
 
           // 加入今天的签到数据
           if (!date) {
-            date1 = [c_time.substring(0, 10)]
+            date = [c_time.substring(0, 10)]
           } else {
-            date1.push(c_time.substring(0, 10))
+            date.push(c_time.substring(0, 10))
           }
           if (!time) {
-            time1 = [c_time.substring(11, 16)]
+            time = [c_time.substring(11, 16)]
           } else {
-            time1.push(c_time.substring(11, 16))
+            time.push(c_time.substring(11, 16))
           }
           console.log(time);
           if (!state) {
-            state1 = [c_state]
+            state = [c_state]
           } else {
-            state1.push(c_state)
+            state.push(c_state)
           }
           console.log(state);
           that.setData({
@@ -198,10 +198,10 @@ Page({
           wx.cloud.database().collection('address-book').doc(app.globalData.openId)
             .update({
               data: {
-                date: date1,
-                time: time1,
+                date: date,
+                time: time,
                 // 直接存入用户 对于当前设定的签到 的签到状态，而不是到时候查看出勤时实时的状态
-                state: state1
+                state: state
               }
             })
             .then(res => {

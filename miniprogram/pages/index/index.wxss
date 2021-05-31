@@ -42,6 +42,7 @@
   border-bottom-style: solid;
   align-items: center;
   position: relative;
+
 }
 .item-img {
   width: 40%;

@@ -1,5 +1,5 @@
 <view class=".text-frame">
-  <text>工号</text>
+  <text>学号</text>
 </view>
 <view>
   <input class=".input-frame" type="number" bindinput="formNum" placeholder="{{new_info.num}}" disabled="{{have_info}}"/>
